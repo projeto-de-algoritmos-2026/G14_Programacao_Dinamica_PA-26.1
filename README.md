@@ -125,14 +125,6 @@ O sistema desenvolvido permite:
 - Identificar os conteúdos não escolhidos.
 - Executar testes automatizados da lógica principal.
 
-Funcionalidades previstas para a versão final:
-
-- Carregar exemplos prontos de conteúdos.
-- Cadastrar conteúdos manualmente.
-- Exibir os resultados formatados no terminal.
-- Comparar a solução ótima com uma estratégia gulosa.
-- Mostrar a matriz de Programação Dinâmica de forma visual.
-
 ## Screenshots
 
 <!-- Os prints serão adicionados quando a implementação final da interface estiver pronta. -->
@@ -173,11 +165,6 @@ Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programaç
 
 image
 
-### Comparação com Estratégia Gulosa
-
-Exibe a comparação entre a solução ótima encontrada por Programação Dinâmica e uma solução gulosa.
-
-image
 
 ## Instalação
 
