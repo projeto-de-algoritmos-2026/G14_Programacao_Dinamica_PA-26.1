@@ -17,7 +17,7 @@ Vídeo da Apresentação: a adicionar
 
 Este projeto tem como objetivo demonstrar a aplicação prática do paradigma de Programação Dinâmica por meio da implementação do algoritmo **Knapsack**.
 
-O sistema simula uma situação real em que um estudante possui tempo limitado antes de uma prova e precisa decidir quais conteúdos estudar para obter o maior retorno possível. Cada conteúdo possui tempo necessário de estudo, importância na prova, dificuldade e nível de domínio atual do aluno.
+O sistema simula uma situação real em que um estudante possui tempo limitado antes de uma prova e precisa decidir quais conteúdos estudar para obter o maior retorno possível. Nesta versão do sistema, os conteúdos são fornecidos por meio de uma lista pré-definida no código-fonte, utilizada para demonstrar o funcionamento do algoritmo.
 
 A partir dessas informações, o sistema calcula uma pontuação de prioridade para cada conteúdo e utiliza Programação Dinâmica para selecionar a melhor combinação de assuntos que respeita o tempo disponível.
 
@@ -115,7 +115,7 @@ No contexto do sistema:
 
 O sistema desenvolvido permite:
 
-- Representar conteúdos de estudo.
+- Utilizar uma lista pré-definida de conteúdos de estudo.
 - Calcular a prioridade de cada conteúdo.
 - Executar o algoritmo Knapsack 0/1.
 - Construir a matriz de Programação Dinâmica.
@@ -123,101 +123,12 @@ O sistema desenvolvido permite:
 - Calcular a pontuação máxima.
 - Calcular o tempo total utilizado.
 - Identificar os conteúdos não escolhidos.
-- Executar testes automatizados da lógica principal.
-
-Funcionalidades previstas para a versão final:
-
-- Carregar exemplos prontos de conteúdos.
-- Cadastrar conteúdos manualmente.
 - Exibir os resultados formatados no terminal.
-- Comparar a solução ótima com uma estratégia gulosa.
-- Mostrar a matriz de Programação Dinâmica de forma visual.
-
-## Screenshots
-
-<!-- Os prints serão adicionados quando a implementação final da interface estiver pronta. -->
-
-### Tela Inicial
-
-Representa o estado inicial do sistema, onde o usuário poderá escolher uma das funcionalidades disponíveis.
-
-image
-
-### Cadastro de Conteúdos
-
-Mostra o cadastro de conteúdos contendo nome, tempo necessário, importância, dificuldade e domínio atual.
-
-image
-
-### Execução do Planejamento
-
-Exibe o resultado da execução do algoritmo Knapsack 0/1 para o tempo disponível informado.
-
-image
-
-### Conteúdos Escolhidos
-
-Mostra os conteúdos selecionados para compor o plano ótimo de estudos.
-
-image
-
-### Conteúdos Não Escolhidos
-
-Mostra os conteúdos que ficaram fora do plano por causa do limite de tempo.
-
-image
-
-### Matriz de Programação Dinâmica
-
-Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programação Dinâmica.
-
-image
-
-### Comparação com Estratégia Gulosa
-
-Exibe a comparação entre a solução ótima encontrada por Programação Dinâmica e uma solução gulosa.
-
-image
-
-## Instalação
-
-### Linguagem
-
-Python 3.10+
-
-### Pré-requisitos
-
-- Python 3 instalado
-- Git instalado
-
-### Passos
-
-Clone o repositório:
-
-```bash
-git clone <url-do-repositorio>
-cd G14_Programacao_Dinamica_PA-26.1
-```
-
-## Uso
-
-Para executar o projeto, utilize o seguinte comando:
-
-```bash
-python3 main.py
-```
-
-Após executar, o sistema apresenta um exemplo de plano de estudos calculado com Programação Dinâmica.
-
-Para executar os testes automatizados:
-
-```bash
-python3 -m unittest discover -s tests
-```
+- Executar testes automatizados da lógica principal.
 
 ## Regras do Sistema
 
-O sistema trabalha com uma lista de conteúdos cadastrados.
+O sistema trabalha com uma lista de conteúdos pré-cadastrados.
 
 Cada conteúdo deve possuir:
 
@@ -254,43 +165,6 @@ Onde:
 - `n` é a quantidade de conteúdos.
 - `T` é o tempo total disponível.
 
-## Exemplo de Entrada
-
-| Conteúdo | Tempo | Importância | Dificuldade | Domínio atual | Prioridade |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Knapsack | 3h | 10 | 8 | 4 | 14 |
-| LIS | 2h | 7 | 5 | 6 | 6 |
-| Bellman-Ford | 4h | 9 | 9 | 3 | 15 |
-
-Tempo disponível:
-
-```text
-7h
-```
-
-## Exemplo de Saída
-
-```text
-Plano de estudos sugerido
-Pontuacao maxima: 29
-Tempo utilizado: 7h
-Conteudos escolhidos:
-- Knapsack
-- Bellman-Ford
-```
-
-Nesse exemplo, o sistema escolhe Knapsack e Bellman-Ford porque essa combinação utiliza exatamente as 7 horas disponíveis e gera a maior pontuação possível.
-
-Aqui, Bellman-Ford é apenas um conteúdo de estudo selecionado pelo planejamento, assim como Knapsack e LIS. Ele não é o algoritmo executado pelo sistema.
-
-## Comparação com Estratégia Gulosa
-
-Como melhoria do projeto, também será utilizada uma estratégia gulosa para comparação.
-
-Uma abordagem gulosa pode escolher primeiro os conteúdos com maior prioridade individual. Porém, essa decisão local nem sempre gera o melhor resultado global, pois um conteúdo muito prioritário pode ocupar tempo demais e impedir uma combinação melhor.
-
-A Programação Dinâmica, por outro lado, avalia subproblemas e reutiliza resultados já calculados. Isso permite encontrar a melhor combinação possível dentro do limite de tempo.
-
 ## Complexidade
 
 Considerando:
@@ -315,6 +189,43 @@ O espaço também é `O(n * T)` porque a matriz completa é mantida para permiti
 - A matriz pode ser exibida para demonstrar o funcionamento interno do algoritmo.
 - O projeto demonstra a aplicação prática de Programação Dinâmica em um cenário de planejamento de estudos.
 
+
+## Screenshots
+
+### Conteúdos Disponíveis
+
+Apresenta a lista pré-definida de conteúdos utilizada pelo sistema como entrada para o algoritmo.
+
+<img width="875" height="390" alt="image" src="https://github.com/user-attachments/assets/70ec0fc5-a36e-468a-bae9-530758d78139" />
+
+
+### Execução do Planejamento
+
+Exibe o resultado da execução do algoritmo Knapsack 0/1 para o tempo disponível informado.
+
+<img width="871" height="161" alt="image" src="https://github.com/user-attachments/assets/9729c119-53fe-45fe-bdd3-869712b12a09" />
+
+
+### Conteúdos Escolhidos
+
+Mostra os conteúdos selecionados para compor o plano ótimo de estudos.
+
+<img width="551" height="128" alt="image" src="https://github.com/user-attachments/assets/b62d062c-daf7-4d0a-a4ea-be3039c7b588" />
+
+
+### Conteúdos Não Escolhidos
+
+Mostra os conteúdos que ficaram fora do plano por causa do limite de tempo.
+
+<img width="557" height="86" alt="image" src="https://github.com/user-attachments/assets/8da19e7b-ac75-4dc8-b5ae-30a6ac811cea" />
+
+
+### Matriz de Programação Dinâmica
+
+Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programação Dinâmica.
+
+<img width="847" height="236" alt="image" src="https://github.com/user-attachments/assets/73ff8357-0d2f-45ab-aec8-7228ec0b2faf" />
+
 ## Justificativa do Algoritmo
 
 O algoritmo Knapsack foi escolhido porque o problema possui uma estrutura compatível com decisões binárias: cada conteúdo deve ser estudado ou não estudado.
@@ -324,28 +235,64 @@ Como o estudante possui um limite de tempo antes da prova, é necessário seleci
 A Programação Dinâmica é adequada porque evita recalcular os mesmos subproblemas várias vezes. Em vez de testar todas as combinações de forma bruta, o algoritmo armazena os melhores resultados intermediários em uma matriz e utiliza essas respostas para construir a solução final.
 
 Esse comportamento torna o algoritmo eficiente, explicável e adequado para demonstrar o conteúdo da disciplina.
+## Instalação
+
+### Linguagem
+
+Python 3.10+
+
+### Pré-requisitos
+
+- Python 3 instalado
+- Git instalado
+
+### Passos
+
+Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+cd G14_Programacao_Dinamica_PA-26.1
+```
+
+## Uso
+
+Para executar o projeto, utilize o seguinte comando:
+
+```bash
+python main.py
+```
+
+Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula suas prioridades e gera automaticamente o plano de estudos ótimo utilizando o algoritmo Knapsack 0/1.
+
+Para executar os testes automatizados:
+
+```bash
+python -m unittest discover
+```
 
 ## Estrutura do Projeto
 
 ```text
 G14_Programacao_Dinamica_PA-26.1
+├── README.md
 ├── main.py
-│   └── Programa principal com exemplo de execução
 │
 ├── src/
+│   ├── __init__.py
 │   ├── subject.py
 │   │   └── Classe responsável por representar um conteúdo de estudo
-│   │
 │   ├── priority.py
 │   │   └── Cálculo da prioridade dos conteúdos
-│   │
 │   └── knapsack.py
 │       └── Implementação do algoritmo Knapsack 0/1
 │
 └── tests/
+    ├── __init__.py
+    ├── test_subject.py
+    │   └── Testes da classe Subject e validações dos dados
     ├── test_priority.py
     │   └── Testes da fórmula de prioridade
-    │
     └── test_knapsack.py
         └── Testes do algoritmo de Programação Dinâmica
 ```
