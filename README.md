@@ -17,7 +17,7 @@ Vídeo da Apresentação: a adicionar
 
 Este projeto tem como objetivo demonstrar a aplicação prática do paradigma de Programação Dinâmica por meio da implementação do algoritmo **Knapsack**.
 
-O sistema simula uma situação real em que um estudante possui tempo limitado antes de uma prova e precisa decidir quais conteúdos estudar para obter o maior retorno possível. Cada conteúdo possui tempo necessário de estudo, importância na prova, dificuldade e nível de domínio atual do aluno.
+O sistema simula uma situação real em que um estudante possui tempo limitado antes de uma prova e precisa decidir quais conteúdos estudar para obter o maior retorno possível. Nesta versão do sistema, os conteúdos são fornecidos por meio de uma lista pré-definida no código-fonte, utilizada para demonstrar o funcionamento do algoritmo.
 
 A partir dessas informações, o sistema calcula uma pontuação de prioridade para cada conteúdo e utiliza Programação Dinâmica para selecionar a melhor combinação de assuntos que respeita o tempo disponível.
 
@@ -115,7 +115,7 @@ No contexto do sistema:
 
 O sistema desenvolvido permite:
 
-- Representar conteúdos de estudo.
+- Utilizar uma lista pré-definida de conteúdos de estudo.
 - Calcular a prioridade de cada conteúdo.
 - Executar o algoritmo Knapsack 0/1.
 - Construir a matriz de Programação Dinâmica.
@@ -123,6 +123,7 @@ O sistema desenvolvido permite:
 - Calcular a pontuação máxima.
 - Calcular o tempo total utilizado.
 - Identificar os conteúdos não escolhidos.
+- Exibir os resultados formatados no terminal.
 - Executar testes automatizados da lógica principal.
 
 ## Screenshots
@@ -135,9 +136,9 @@ Representa o estado inicial do sistema, onde o usuário poderá escolher uma das
 
 image
 
-### Cadastro de Conteúdos
+### Conteúdos Disponíveis
 
-Mostra o cadastro de conteúdos contendo nome, tempo necessário, importância, dificuldade e domínio atual.
+Apresenta a lista pré-definida de conteúdos utilizada pelo sistema como entrada para o algoritmo.
 
 image
 
@@ -194,7 +195,7 @@ Para executar o projeto, utilize o seguinte comando:
 python3 main.py
 ```
 
-Após executar, o sistema apresenta um exemplo de plano de estudos calculado com Programação Dinâmica.
+Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula suas prioridades e gera automaticamente o plano de estudos ótimo utilizando o algoritmo Knapsack 0/1.
 
 Para executar os testes automatizados:
 
@@ -317,7 +318,7 @@ Esse comportamento torna o algoritmo eficiente, explicável e adequado para demo
 ```text
 G14_Programacao_Dinamica_PA-26.1
 ├── main.py
-│   └── Programa principal com exemplo de execução
+│   └── Programa principal contendo a lista pré-definida de conteúdos e a execução do algoritmo
 │
 ├── src/
 │   ├── subject.py
