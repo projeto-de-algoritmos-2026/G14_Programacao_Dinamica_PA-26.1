@@ -2,7 +2,7 @@
 
 Número da Dupla: 14  
 Conteúdo da Disciplina: Programação Dinâmica  
-Vídeo da Apresentação: a adicionar
+[Vídeo da Apresentação](https://youtu.be/oj0MkpRER28)
 
 ## Alunas
 
