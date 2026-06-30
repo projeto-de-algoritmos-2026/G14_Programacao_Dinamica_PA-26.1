@@ -224,7 +224,7 @@ Mostra os conteúdos que ficaram fora do plano por causa do limite de tempo.
 
 Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programação Dinâmica.
 
-<img width="847" height="236" alt="image" src="https://github.com/user-attachments/assets/73ff8357-0d2f-45ab-aec8-7228ec0b2faf" />
+<img width="877" height="357" alt="image" src="https://github.com/user-attachments/assets/131d6a5e-9793-478f-854c-bbde6dad48b8" />
 
 ## Justificativa do Algoritmo
 
