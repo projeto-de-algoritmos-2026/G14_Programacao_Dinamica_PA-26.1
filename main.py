@@ -3,6 +3,29 @@ from src.knapsack import plan_studies
 from src.priority import subject_priority
 
 
+def print_dp_table(subjects, dp_table, available_time):
+    print("\n" + "=" * 75)
+    print("MATRIZ DE PROGRAMAÇÃO DINÂMICA (KNAPSACK)")
+    print("=" * 75)
+
+    header = " " * 22
+    for t in range(available_time + 1):
+        header += f"{t:>4}"
+    print(header)
+    print("-" * len(header))
+
+    print(f"{'Nenhum':<22}" + "".join(f"{v:>4}" for v in dp_table[0]))
+
+    for i, subject in enumerate(subjects, start=1):
+        row = f"{subject.name:<22}"
+        row += "".join(f"{v:>4}" for v in dp_table[i])
+        print(row)
+
+    print("-" * len(header))
+    print(f"⭐ Melhor pontuação final: {dp_table[-1][-1]}")
+    print("=" * 75)
+
+
 def main():
     subjects = [
         Subject(
@@ -20,7 +43,7 @@ def main():
             mastery=4,
         ),
         Subject(
-            name="Alinhamento de Sequência",
+            name="Alinhamento de Sequên.",
             time=5,
             importance=10,
             difficulty=10,
@@ -75,35 +98,28 @@ def main():
 
     result = plan_studies(subjects, available_time)
 
-    print("=" * 75)
+    print("\n" + "=" * 75)
     print("PLANO DE ESTUDOS ENCONTRADO")
     print("=" * 75)
 
-    print(f"\nTempo utilizado : {result.time_used} horas")
-    print(f"Pontuação máxima: {result.max_score}\n")
+    print(f"\n Tempo utilizado: {result.time_used} horas")
+    print(f" Pontuação máxima: {result.max_score}\n")
 
-    print("Conteúdos escolhidos:")
-
+    print(" Conteúdos escolhidos:")
     for subject in result.selected_subjects:
         print(
             f"• {subject.name} "
             f"({subject.time}h | prioridade = {subject_priority(subject)})"
         )
 
-    print("\nConteúdos não escolhidos:")
-
+    print("\n Conteúdos não escolhidos:")
     for subject in result.rejected_subjects:
         print(
             f"• {subject.name} "
             f"({subject.time}h | prioridade = {subject_priority(subject)})"
         )
 
-    print("\n" + "=" * 75)
-    print("MATRIZ DE PROGRAMAÇÃO DINÂMICA")
-    print("=" * 75)
-
-    for row in result.dp_table:
-        print(row)
+    print_dp_table(subjects, result.dp_table, available_time)
 
 
 if __name__ == "__main__":
