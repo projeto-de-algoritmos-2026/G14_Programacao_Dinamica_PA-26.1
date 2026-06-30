@@ -271,14 +271,6 @@ Nesse exemplo, o sistema escolhe Knapsack e Bellman-Ford porque essa combinaçã
 
 Aqui, Bellman-Ford é apenas um conteúdo de estudo selecionado pelo planejamento, assim como Knapsack e LIS. Ele não é o algoritmo executado pelo sistema.
 
-## Comparação com Estratégia Gulosa
-
-Como melhoria do projeto, também será utilizada uma estratégia gulosa para comparação.
-
-Uma abordagem gulosa pode escolher primeiro os conteúdos com maior prioridade individual. Porém, essa decisão local nem sempre gera o melhor resultado global, pois um conteúdo muito prioritário pode ocupar tempo demais e impedir uma combinação melhor.
-
-A Programação Dinâmica, por outro lado, avalia subproblemas e reutiliza resultados já calculados. Isso permite encontrar a melhor combinação possível dentro do limite de tempo.
-
 ## Complexidade
 
 Considerando:
