@@ -126,46 +126,6 @@ O sistema desenvolvido permite:
 - Exibir os resultados formatados no terminal.
 - Executar testes automatizados da lógica principal.
 
-## Screenshots
-
-<!-- Os prints serão adicionados quando a implementação final da interface estiver pronta. -->
-
-### Tela Inicial
-
-Representa o estado inicial do sistema, onde o usuário poderá escolher uma das funcionalidades disponíveis.
-
-image
-
-### Conteúdos Disponíveis
-
-Apresenta a lista pré-definida de conteúdos utilizada pelo sistema como entrada para o algoritmo.
-
-image
-
-### Execução do Planejamento
-
-Exibe o resultado da execução do algoritmo Knapsack 0/1 para o tempo disponível informado.
-
-image
-
-### Conteúdos Escolhidos
-
-Mostra os conteúdos selecionados para compor o plano ótimo de estudos.
-
-image
-
-### Conteúdos Não Escolhidos
-
-Mostra os conteúdos que ficaram fora do plano por causa do limite de tempo.
-
-image
-
-### Matriz de Programação Dinâmica
-
-Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programação Dinâmica.
-
-image
-
 ## Regras do Sistema
 
 O sistema trabalha com uma lista de conteúdos pré-cadastrados.
@@ -205,35 +165,6 @@ Onde:
 - `n` é a quantidade de conteúdos.
 - `T` é o tempo total disponível.
 
-## Exemplo de Entrada
-
-| Conteúdo | Tempo | Importância | Dificuldade | Domínio atual | Prioridade |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Knapsack | 3h | 10 | 8 | 4 | 14 |
-| LIS | 2h | 7 | 5 | 6 | 6 |
-| Bellman-Ford | 4h | 9 | 9 | 3 | 15 |
-
-Tempo disponível:
-
-```text
-7h
-```
-
-## Exemplo de Saída
-
-```text
-Plano de estudos sugerido
-Pontuacao maxima: 29
-Tempo utilizado: 7h
-Conteudos escolhidos:
-- Knapsack
-- Bellman-Ford
-```
-
-Nesse exemplo, o sistema escolhe Knapsack e Bellman-Ford porque essa combinação utiliza exatamente as 7 horas disponíveis e gera a maior pontuação possível.
-
-Aqui, Bellman-Ford é apenas um conteúdo de estudo selecionado pelo planejamento, assim como Knapsack e LIS. Ele não é o algoritmo executado pelo sistema.
-
 ## Complexidade
 
 Considerando:
@@ -257,6 +188,43 @@ O espaço também é `O(n * T)` porque a matriz completa é mantida para permiti
 - A solução ótima é reconstruída a partir da matriz de Programação Dinâmica.
 - A matriz pode ser exibida para demonstrar o funcionamento interno do algoritmo.
 - O projeto demonstra a aplicação prática de Programação Dinâmica em um cenário de planejamento de estudos.
+
+
+## Screenshots
+
+### Conteúdos Disponíveis
+
+Apresenta a lista pré-definida de conteúdos utilizada pelo sistema como entrada para o algoritmo.
+
+<img width="875" height="390" alt="image" src="https://github.com/user-attachments/assets/70ec0fc5-a36e-468a-bae9-530758d78139" />
+
+
+### Execução do Planejamento
+
+Exibe o resultado da execução do algoritmo Knapsack 0/1 para o tempo disponível informado.
+
+<img width="871" height="161" alt="image" src="https://github.com/user-attachments/assets/9729c119-53fe-45fe-bdd3-869712b12a09" />
+
+
+### Conteúdos Escolhidos
+
+Mostra os conteúdos selecionados para compor o plano ótimo de estudos.
+
+<img width="551" height="128" alt="image" src="https://github.com/user-attachments/assets/b62d062c-daf7-4d0a-a4ea-be3039c7b588" />
+
+
+### Conteúdos Não Escolhidos
+
+Mostra os conteúdos que ficaram fora do plano por causa do limite de tempo.
+
+<img width="557" height="86" alt="image" src="https://github.com/user-attachments/assets/8da19e7b-ac75-4dc8-b5ae-30a6ac811cea" />
+
+
+### Matriz de Programação Dinâmica
+
+Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programação Dinâmica.
+
+<img width="847" height="236" alt="image" src="https://github.com/user-attachments/assets/73ff8357-0d2f-45ab-aec8-7228ec0b2faf" />
 
 ## Justificativa do Algoritmo
 
@@ -292,7 +260,7 @@ cd G14_Programacao_Dinamica_PA-26.1
 Para executar o projeto, utilize o seguinte comando:
 
 ```bash
-python3 main.py
+python main.py
 ```
 
 Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula suas prioridades e gera automaticamente o plano de estudos ótimo utilizando o algoritmo Knapsack 0/1.
@@ -300,30 +268,31 @@ Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula
 Para executar os testes automatizados:
 
 ```bash
-python3 -m unittest discover -s tests
+python -m unittest discover
 ```
 
 ## Estrutura do Projeto
 
 ```text
 G14_Programacao_Dinamica_PA-26.1
+├── README.md
 ├── main.py
-│   └── Programa principal contendo a lista pré-definida de conteúdos e a execução do algoritmo
 │
 ├── src/
+│   ├── __init__.py
 │   ├── subject.py
 │   │   └── Classe responsável por representar um conteúdo de estudo
-│   │
 │   ├── priority.py
 │   │   └── Cálculo da prioridade dos conteúdos
-│   │
 │   └── knapsack.py
 │       └── Implementação do algoritmo Knapsack 0/1
 │
 └── tests/
+    ├── __init__.py
+    ├── test_subject.py
+    │   └── Testes da classe Subject e validações dos dados
     ├── test_priority.py
     │   └── Testes da fórmula de prioridade
-    │
     └── test_knapsack.py
         └── Testes do algoritmo de Programação Dinâmica
 ```
