@@ -20,5 +20,17 @@ class PriorityTest(unittest.TestCase):
         self.assertEqual(subject_priority(subject), 14)
 
 
+    def test_zero_priority(self):
+        self.assertEqual(
+            calculate_priority(5, 5, 10),
+            0,
+        )
+
+    def test_negative_priority(self):
+        self.assertEqual(
+            calculate_priority(2, 2, 8),
+            -4,
+        )
+
 if __name__ == "__main__":
     unittest.main()

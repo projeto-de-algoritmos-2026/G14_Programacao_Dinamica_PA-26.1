@@ -42,7 +42,27 @@ class KnapsackTest(unittest.TestCase):
         self.assertEqual(len(result.dp_table), 3)
         self.assertEqual(len(result.dp_table[0]), 6)
         self.assertEqual(result.dp_table[-1][-1], result.max_score)
+    
+    def test_empty_subject_list(self):
+        result = plan_studies([], 5)
 
+        self.assertEqual(result.max_score, 0)
+        self.assertEqual(result.selected_subjects, [])
+        self.assertEqual(result.rejected_subjects, [])
+
+    def test_negative_available_time(self):
+        with self.assertRaises(ValueError):
+            plan_studies([], -1)
+
+    def test_all_subjects_fit(self):
+        subjects = [
+            Subject("A", 2, 8, 6, 2),
+            Subject("B", 2, 9, 7, 3),
+        ]
+
+        result = plan_studies(subjects, 5)
+
+        self.assertEqual(len(result.selected_subjects), 2)
 
 if __name__ == "__main__":
     unittest.main()
