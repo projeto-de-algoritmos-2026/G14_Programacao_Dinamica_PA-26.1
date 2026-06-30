@@ -166,46 +166,9 @@ Demonstra a matriz preenchida pelo algoritmo para evidenciar o uso de Programaç
 
 image
 
-
-## Instalação
-
-### Linguagem
-
-Python 3.10+
-
-### Pré-requisitos
-
-- Python 3 instalado
-- Git instalado
-
-### Passos
-
-Clone o repositório:
-
-```bash
-git clone <url-do-repositorio>
-cd G14_Programacao_Dinamica_PA-26.1
-```
-
-## Uso
-
-Para executar o projeto, utilize o seguinte comando:
-
-```bash
-python3 main.py
-```
-
-Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula suas prioridades e gera automaticamente o plano de estudos ótimo utilizando o algoritmo Knapsack 0/1.
-
-Para executar os testes automatizados:
-
-```bash
-python3 -m unittest discover -s tests
-```
-
 ## Regras do Sistema
 
-O sistema trabalha com uma lista de conteúdos cadastrados.
+O sistema trabalha com uma lista de conteúdos pré-cadastrados.
 
 Cada conteúdo deve possuir:
 
@@ -304,6 +267,41 @@ Como o estudante possui um limite de tempo antes da prova, é necessário seleci
 A Programação Dinâmica é adequada porque evita recalcular os mesmos subproblemas várias vezes. Em vez de testar todas as combinações de forma bruta, o algoritmo armazena os melhores resultados intermediários em uma matriz e utiliza essas respostas para construir a solução final.
 
 Esse comportamento torna o algoritmo eficiente, explicável e adequado para demonstrar o conteúdo da disciplina.
+## Instalação
+
+### Linguagem
+
+Python 3.10+
+
+### Pré-requisitos
+
+- Python 3 instalado
+- Git instalado
+
+### Passos
+
+Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+cd G14_Programacao_Dinamica_PA-26.1
+```
+
+## Uso
+
+Para executar o projeto, utilize o seguinte comando:
+
+```bash
+python3 main.py
+```
+
+Após executar, o sistema utiliza uma lista pré-definida de conteúdos, calcula suas prioridades e gera automaticamente o plano de estudos ótimo utilizando o algoritmo Knapsack 0/1.
+
+Para executar os testes automatizados:
+
+```bash
+python3 -m unittest discover -s tests
+```
 
 ## Estrutura do Projeto
 
